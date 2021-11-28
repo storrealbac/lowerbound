@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+
+{% from "macros/header.html" import header %}
+{% from "macros/footer.html" import footer %}
+
+
+{{ header() }}
+
+<style>
+    {{styles}}
+</style>
+
+<div class="bg-gray-50 m-10 rounded-lg">
+    <div id="markdown" class="m-10 pb-10">
+        {{ info | safe }}
+    </div>
+</div>
+
+{{ footer () }}
+{% endblock %}
