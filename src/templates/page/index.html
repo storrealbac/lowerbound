@@ -6,33 +6,39 @@
 
 {{ header() }}
 <div class="m-10 bg-white rounded">
-    <div class="m-10">
+    <div class="m-10 pb-10">
         <h1 class="text-center text-4xl font-bold p-5 font-montserrat"> Prólogo </h1>
         <p class="text-lg pb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
-            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
+            La finalidad de este proyecto es recopilar información en distintas fuentes
+            sobre estructuras de datos y algoritmos, especialmente enfocada en programación
+            competitiva, para así mejorar el nivel en la comunidad hablante del español.
         </p>
 
         <p class="text-lg pb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
-            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
+            Tambien se invita a los lectores de este proyecto, que puedan modificar, copiar y/o
+            aportar con nuevas pull-requests para ir agregando y/o mejorando el material actual.
         </p>
 
-        <h1 class="text-center text-4xl font-bold p-5 font-montserrat"> ¿Qué contenido puedes encontrar? </h1>
-
-        <p class="text-lg pb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
-            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
+        <p class="text-lg pb-5"> 
+            Fuente de inspiración:
+            <a href="https://cp-algorithms.com/" class="text-gray-800 hover:underline font-bold">cp-algorithms.com</a>
         </p>
 
-        <p class="text-lg pb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
-            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
-        </p>
+        <h1 class="text-center text-4xl font-bold p-5 font-montserrat"> Listado de contenidos </h1>
+        {% for division in contents %}
+            <h1 class="text-xl font-bold">{{division.replace("_", " ")}}</h1>
+            {% for subdivision in contents[division]%}
+                <h1 class="text-lg ml-10 mt-2 font-bold">• {{subdivision.replace("_", " ")}} </h1>
+                {% for material in contents[division][subdivision] %}
+                    <a 
+                        href="/{{division}}/{{subdivision}}/{{material.split(".")[0]}}"
+                        class="ml-20 grid grid-cols-1 mt-1 text-gray-800 hover:underline text-lg"
+                    >
+                        {{material.split(".")[0].replace("_", " ")}}
+                    </a>
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
     </div>
 </div>
 
