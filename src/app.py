@@ -7,27 +7,44 @@ import markdown
 # CSS
 from pygments.formatters import HtmlFormatter
 
+# Utils
+from utils import validatePath, getAllContents
+
 # App
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("page/index.html", title="Inicio")
+    return render_template(
+        "page/index.html", 
+        title="Inicio",
+        contents=getAllContents())
 
-@app.route("/<folder>/<file>")
-def material(folder, file):
+@app.route("/<theme>/<folder>/<file_name>")
+def material(theme, folder, file_name):
+
+    if not validatePath(theme):
+        return "Error 1", 404
+
+    if not validatePath(folder):
+        return "Error 2", 404
+    
+    if not validatePath(folder):
+        return "Error 3", 404
 
     try:
-        file = open(f"docs/{folder}/{file}.md")
+        file = open(f"docs/{theme}/{folder}/{file_name}.md")
     except:
-        return "Error", 404
+        return "Error 4", 404
 
     formatter = HtmlFormatter(style="native",full=True, cssclass="codehilite")
     md_template_string = markdown.markdown(file.read(), extensions=["fenced_code", "tables", "codehilite", "mdx_math"])
     
+   
+
     return render_template(
         "page/material.html",
-        title="Test",
+        title=file_name.capitalize(),
         info=md_template_string,
         styles=formatter.get_style_defs()
     )
