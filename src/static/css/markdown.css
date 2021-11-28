@@ -1,0 +1,119 @@
+/* Text elements */
+
+#markdown h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: underline;
+}
+
+#markdown h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+#markdown h3 {
+	font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+#markdown h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 0.5rem;
+
+}
+
+#markdown h5 {
+	font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 0.5rem;
+
+}
+
+#markdown h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 0.5rem;
+
+}
+
+#markdown p {
+    font-size: 1.1rem;
+    margin: 1rem;
+}
+
+/* Tables */
+table {
+    width: 95%;
+    margin: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+
+/* Vinculos */
+#markdown a {
+    color:rgba(31, 41, 55);
+}
+
+/* Code */ 
+.codehilite pre {
+    padding : 1rem;
+    margin: 1rem;
+    background-color: #202020;
+    border-radius: 0.25rem;
+}
+
+/* Lists */
+#markdown ul {
+    list-style-position: outside;
+    list-style: square;
+}
+
+#markdown ul > li {
+    margin-left: 1.5rem;
+}
+
+#markdown img {
+    border-radius: 0.25rem;
+    margin: 1rem auto;
+}

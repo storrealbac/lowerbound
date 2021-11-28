@@ -1,0 +1,40 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+
+{% from "macros/header.html" import header %}
+{% from "macros/footer.html" import footer %}
+
+{{ header() }}
+<div class="m-10 bg-white rounded">
+    <div class="m-10">
+        <h1 class="text-center text-4xl font-bold p-5 font-montserrat"> Prólogo </h1>
+        <p class="text-lg pb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
+            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
+        </p>
+
+        <p class="text-lg pb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
+            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
+        </p>
+
+        <h1 class="text-center text-4xl font-bold p-5 font-montserrat"> ¿Qué contenido puedes encontrar? </h1>
+
+        <p class="text-lg pb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
+            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
+        </p>
+
+        <p class="text-lg pb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur nobis adipisci, fugit assumenda necessitatibus nisi quidem aut.
+            Saepe nobis, atque rerum modi unde similique, accusamus, ullam ea quas voluptatem minima.
+        </p>
+    </div>
+</div>
+
+{{ footer () }}
+{% endblock %}
