@@ -5,23 +5,25 @@ Validate if it is a valid name, to avoid
 file transversal vulnerabilities
 """
 def validatePath(name: str) -> bool:
-    name = name.lower()
+    name = normalize(name.lower())
     valid_characters = "abcdefghijklmnñopqrstuvwxyz-_"
     for c in name:
         if c not in valid_characters:
             return False
     return True
 
-
-def pretty(d, indent=0):
-   for key, value in d.items():
-      print('\t' * indent + str(key))
-      if isinstance(value, dict):
-         pretty(value, indent+1)
-      else:
-         print('\t' * (indent+1) + str(value))
-
-
+def normalize(s):
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+    )
+    
+    for a, b in replacements:
+        s = s.replace(a, b).replace(a.upper(), b.upper())
+    return s
 
 def getAllContents():
     contents = {}

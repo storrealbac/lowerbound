@@ -44,7 +44,7 @@ def material(theme, folder, file_name):
 
     return render_template(
         "page/material.html",
-        title=file_name.capitalize(),
+        title=file_name.replace("_", " "),
         info=md_template_string,
         styles=formatter.get_style_defs()
     )
