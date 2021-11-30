@@ -9,11 +9,17 @@ Como se puede observar la sucesión empieza el número $0$ y $1$, luego a partir
 ## Propiedades
 Los números de Fibonacci tienen algunas propiedades interesantes, aquí alguna de ellas
 - Identidad de Cassini: $F_{n-1}\cdot F_{n+1} - F_n^2=(-1)^n$
+	
 - Regla de la adición: $F_{n+k} = F_kF_{n+1} + F_{k-1}F_n$
+	
 - Si se aplica la identidad anterior también tenemos: $F_{2n}=F_n(F_{n+1} + F_{n-1})$
+	
 - También se puede demostrar con inducción que cualquier numero positivo $k$, $F_{nk} es multplo de $F_n$
+	
 - Lo inverso también es verdadero: Si $F_m$ es múltiplo de $F_n$, entonces $m$ es múltiplo de $n$
+	
 - Identidad del máximo común divisor: $\textrm{GCD}(F_m, F_n) = F_{\textrm{GCD}(m, \space n)}$
+	
 - Los números de Fibonacci son la peor entrada posible para el Algoritmo euclidiano
 
 ## Formula de Fibonacci
