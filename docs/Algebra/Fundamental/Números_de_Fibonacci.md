@@ -14,7 +14,7 @@ Los números de Fibonacci tienen algunas propiedades interesantes, aquí alguna 
 	
 - Si se aplica la identidad anterior también tenemos: $F_{2n}=F_n(F_{n+1} + F_{n-1})$
 	
-- También se puede demostrar con inducción que cualquier numero positivo $k$, $F_{nk} es multplo de $F_n$
+- También se puede demostrar con inducción que cualquier numero positivo $k$, $F_{nk}$ es múltiplo de $F_n$
 	
 - Lo inverso también es verdadero: Si $F_m$ es múltiplo de $F_n$, entonces $m$ es múltiplo de $n$
 	
