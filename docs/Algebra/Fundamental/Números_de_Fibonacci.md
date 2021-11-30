@@ -8,6 +8,7 @@ Como se puede observar la sucesión empieza el número $0$ y $1$, luego a partir
 
 ## Propiedades
 Los números de Fibonacci tienen algunas propiedades interesantes, aquí alguna de ellas
+
 - Identidad de Cassini: $F_{n-1}\cdot F_{n+1} - F_n^2=(-1)^n$
 	
 - Regla de la adición: $F_{n+k} = F_kF_{n+1} + F_{k-1}F_n$
