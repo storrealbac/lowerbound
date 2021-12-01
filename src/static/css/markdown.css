@@ -117,3 +117,20 @@ table > thead:first-child > tr:first-child > td {
     border-radius: 0.25rem;
     margin: 1rem auto;
 }
+
+/* Print config */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #markdown, #markdown * {
+        visibility: visible;
+    }
+
+    #markdown {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
